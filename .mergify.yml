@@ -1,3 +1,10 @@
+merge_protections:
+  - name: require-review
+    if:
+      - base=main
+    success_conditions:
+      - "#approved-reviews-by>=1"
+
 queue_rules:
   - name: default
     merge_conditions: []
