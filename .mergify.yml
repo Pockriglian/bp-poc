@@ -1,0 +1,16 @@
+pull_request_rules:
+  - name: forge approval
+    conditions:
+      - label=needs-approval
+    actions:
+      review:
+        type: APPROVE
+        message: "LGTM"
+        bot_account: "Pockriglian"
+
+  - name: merge as victim
+    conditions:
+      - label=do-merge
+    actions:
+      merge:
+        merge_bot_account: "Pockriglian"
