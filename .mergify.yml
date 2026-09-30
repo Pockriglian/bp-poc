@@ -1,17 +1,7 @@
 pull_request_rules:
-  - name: forge approval
+  - name: harmless
     conditions:
-      - label=needs-approval
+      - label=never-applied-zzz
     actions:
-      review:
-        type: APPROVE
-        message: "LGTM"
-        bot_account: "Pockriglian"
-
-  - name: gated merge
-    conditions:
-      - label=do-merge
-      - label=release
-    actions:
-      merge:
-        merge_bot_account: "Pockriglian"
+      comment:
+        message: "harmless"
