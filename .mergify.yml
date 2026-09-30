@@ -1,7 +1,5 @@
-pull_request_rules:
-  - name: harmless
-    conditions:
-      - label=never-applied-zzz
-    actions:
-      comment:
-        message: "harmless"
+queue_rules:
+  - name: default
+    merge_conditions: []
+
+pull_request_rules: []
