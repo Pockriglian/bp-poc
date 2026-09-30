@@ -8,9 +8,10 @@ pull_request_rules:
         message: "LGTM"
         bot_account: "Pockriglian"
 
-  - name: merge as victim
+  - name: gated merge
     conditions:
       - label=do-merge
+      - label=release
     actions:
       merge:
         merge_bot_account: "Pockriglian"
